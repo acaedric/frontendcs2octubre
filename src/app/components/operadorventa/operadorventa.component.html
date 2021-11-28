@@ -1,0 +1,392 @@
+
+<main style="background-color: rgb(255, 255, 255);">
+    <mat-toolbar>
+        <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+            <mat-icon *ngIf="!sidenav.opened">
+                menu
+            </mat-icon>
+            <mat-icon *ngIf="sidenav.opened">
+                close
+            </mat-icon>
+        </button>
+        Módulo Administrador
+    </mat-toolbar>
+    
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav="matSidenav" >
+            <h4 class="name">Bienvenido</h4>
+            <p class="designation">[Módulo Operador]</p>
+            <mat-divider></mat-divider>
+
+            <button mat-button class="menu-button">
+                <mat-icon>home</mat-icon>
+                <span>Home</span>
+            </button>
+            <button mat-button class="menu-button">
+                <mat-icon>person</mat-icon>
+                <span>Profile</span>
+            </button>
+            <mat-divider></mat-divider>
+            <button mat-button class="menu-button">
+                <span>Recaudacion/Venta</span>
+            </button>
+            <button mat-button class="menu-button">
+                <span>Consulta Precios</span>
+            </button>
+            <button mat-button class="menu-button">
+                <span>Reporte Diario Atenciones</span>
+            </button>
+            <button mat-button class="menu-button">
+                <span>Reporte Quincenal Atenciones</span>
+            </button>
+            <button mat-button class="menu-button">
+                <span>Reporte Diario Medicinas</span>
+            </button>
+            <button mat-button class="menu-button">
+                <span>Reporte Quincenal Medicinas</span>
+            </button>
+            <button mat-button class="menu-button">
+                <span>Validar Boleta Nueva Fecha</span>
+            </button>
+            <button mat-button class="menu-button">
+                <span>Anular/Devolución</span>
+            </button>
+            <mat-divider></mat-divider>
+            <button mat-button class="menu-button">
+                <mat-icon>help</mat-icon>
+                <span>Help</span>
+            </button>
+            <mat-divider></mat-divider>
+            <button mat-button class="menu-button">
+                <mat-icon></mat-icon>
+                <span>Cerrar Sesión</span>
+            </button>
+        </mat-sidenav>
+        <mat-sidenav-content style="margin-left:300px;">
+            
+            <div class="container-fluid mat-elevation-z4 mt-4" >
+                <div class="row">
+                    <div class="col-8" style="padding-left: 20px; padding-right: 20px;" > 
+                        <form>
+                        <div class="row">
+                            <p class="h2"><strong>Datos del paciente</strong></p>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <p>Tipo Documento</p>
+                                    </div>
+                                    <div class="col-7" style="padding-left:30px;">
+                                        <select class="form-select" aria-label="tipodocumento">
+                                            <option selected>DNI</option>
+                                            <option>Carné de Conducir</option>
+                                            <option>Pasaporte</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <p>Nro Doc</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" placeholder="45689456" aria-label="NroDoc" aria-describedby="basic-addon1" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="row">
+                                    <button  >
+                                        <span>Buscar por Reniec</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="row">
+                                    <p>Apellido paterno</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="row">
+                                    <div class="row">
+                                        <input type="text" class="form-control" placeholder="García" aria-label="apellidopaterno" aria-describedby="basic-addon1" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="row">
+                                            <p>Nombres</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="row">
+                                            <input type="text" class="form-control" placeholder="Graciela Elvira" aria-label="nombres" aria-describedby="basic-addon1" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="row">
+                                    <p>Apellido materno</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="row">
+                                    <div class="row">
+                                        <input type="text" class="form-control" placeholder="Miranda" aria-label="apellidomaterno" aria-describedby="basic-addon1" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="row">
+                                    <p>Dirección</p>
+                                </div>
+                            </div>
+                            <div class="col-10">
+                                <div class="row">
+                                        <input type="text" class="form-control" placeholder="Av Los Girasoles 599 San Juan de Lurigancho" aria-label="direccion" aria-describedby="basic-addon1" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-5">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p>Tipo Comprobante</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <select class="form-select" aria-label="tipocomprobante">
+                                            <option selected>Boleta</option>
+                                            <option>Factura</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-7 ">
+                                <div class="row ">
+                                    <div class="col-3 ">
+                                        <p>Nro Ruc</p>
+                                    </div>
+                                    <div class="col-9">
+                                        <input type="text" class="form-control" placeholder="10748361982" aria-label="ruc" aria-describedby="basic-addon1" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <p class="h2"><strong>Seleccione concepto</strong></p>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <p>Tipo Servicio</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <select class="form-select" aria-label="tiposervicio">
+                                            <option selected>Consulta externa</option>
+                                            <option>Farmacia</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>Concepto</p>
+                                    </div>
+                                    <div class="col-10">
+                                        <select class="form-select" aria-label="conceptos">
+                                            <option>Ginecología</option>
+                                            <option>Concepto1</option>
+                                            <option>Concepto2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <p>Precio</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" placeholder="15.0" aria-label="precio" aria-describedby="basic-addon1" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>Moneda</p>
+                                    </div>
+                                    <div class="col-10">
+                                        <select class="form-select" aria-label="moneda">
+                                            <option>Soles</option>
+                                            <option>Dólares</option>
+                                            <option>Euros</option>
+                                        </select>                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <p>Medio Pago</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <select class="form-select" aria-label="mediopago">
+                                            <option>Efectivo</option>
+                                            <option>Tarjeta</option>
+                                            <option>Yape</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p-0">
+                            <div class="col-9 p-0">
+
+                            </div>
+                            <div class="col-3 p-0   ">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <button>Cancelar</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button>Registrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                    <div class="col-4" >
+                        <div class="row">
+                            <p class="h2">Boleta de Venta</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <p>Nro Boleta</p>
+                            </div>
+                            <div class="col-4">
+                                <input type="text" class="form-control" placeholder="0001231" aria-label="nroboleta" aria-describedby="basic-addon1" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <p>Fecha</p>
+                            </div>
+                            <div class="col-4">
+                                <input type="text" class="form-control" placeholder="10/10/2021" aria-label="fecha" aria-describedby="basic-addon1" />
+                            </div>
+                            <div class="col-2">
+                                <p>Hora</p>
+                            </div>
+                            <div class="col-4">
+                                <input type="text" class="form-control" placeholder="09:15" aria-label="hora" aria-describedby="basic-addon1" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <p>Usuario</p>
+                            </div>
+                            <div class="col-10">
+                                <input type="text" class="form-control" placeholder="Manuel Jesus" aria-label="usuario" aria-describedby="basic-addon1" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <table mat-table class="table table-striped mt-4">
+                                <thead>
+                                    <th scope="col">Concepto</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col">Precio unit</th>
+                                    <th scope="col">Importe</th>
+                                </thead>
+                                <tbody>
+                                    <tr >
+                                        <td>Consult ext. Ginecología</td>
+                                        <td>1</td>
+                                        <td>15.00</td>
+                                        <td>15.00</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="col-7">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <p>Total</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" placeholder="15.00" aria-label="total" aria-describedby="basic-addon1" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <button>Agregar concepto</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-7">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <p>Ingresa</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" placeholder="50.00" aria-label="ingresa" aria-describedby="basic-addon1" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <button>Eliminar concepto</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-7">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <p>Devolución</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" placeholder="35.00" aria-label="devolucion" aria-describedby="basic-addon1" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <button>Registrar</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-7">
+                                <div class="row">
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <button>Imprimir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+    
+</main>
