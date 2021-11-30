@@ -3,13 +3,14 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout'; 
 
 @Component({
-  selector: 'app-operadorventa',
-  templateUrl: './operadorventa.component.html',
-  styleUrls: ['./operadorventa.component.css']
+  selector: 'app-sidebaradmin',
+  templateUrl: './sidebaradmin.component.html',
+  styleUrls: ['./sidebaradmin.component.css']
 })
-export class OperadorventaComponent implements OnInit {
+export class SidebaradminComponent implements OnInit {
   @ViewChild(MatSidenav) 
   sidenav!: MatSidenav;
+
   constructor(private observer: BreakpointObserver) { }
 
   ngOnInit(): void {
