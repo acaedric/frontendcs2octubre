@@ -9,6 +9,12 @@ import { OperadorreportediarioatencionesComponent } from './components/recaudaci
 import { OperadorreportequincenalatencionesComponent } from './components/recaudacion/operador/operadorreportequincenalatenciones/operadorreportequincenalatenciones.component';
 import { OperadorvalidarboletaComponent } from './components/recaudacion/operador/operadorvalidarboleta/operadorvalidarboleta.component';
 import { OperadoranulardevolucionComponent } from './components/recaudacion/operador/operadoranulardevolucion/operadoranulardevolucion.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { AdminComponent } from './components/recaudacion/admin/admin.component';
+import { OperadorComponent } from './components/recaudacion/operador/operador.component';
+import { RecaudacionComponent } from './components/recaudacion/recaudacion.component';
+import { SidebaradminComponent } from './components/sidebaradmin/sidebaradmin.component';
 
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -25,12 +31,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { AdminComponent } from './components/recaudacion/admin/admin.component';
-import { OperadorComponent } from './components/recaudacion/operador/operador.component';
-import { RecaudacionComponent } from './components/recaudacion/recaudacion.component';
-import { SidebaradminComponent } from './components/sidebaradmin/sidebaradmin.component';
-import { InicioComponent } from './components/inicio/inicio.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,9 @@ import { InicioComponent } from './components/inicio/inicio.component';
     MatDatepickerModule,
     MatInputModule,
     MatFormFieldModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatCheckboxModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
